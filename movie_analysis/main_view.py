@@ -1,0 +1,126 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'main_view.ui'
+#
+# Created by: PyQt5 UI code generator 5.10.1
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+from chb.gen_analy_result import tab_view
+from chb.movie_comment_analysis_main import down_data, pre_data, movie_analysis, select_movie, open_file
+
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(776, 600)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.move_analysis_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.move_analysis_btn.setGeometry(QtCore.QRect(520, 20, 75, 23))
+        self.move_analysis_btn.setObjectName("move_analysis_btn")
+        self.sel_movie_cbx = QtWidgets.QComboBox(self.centralwidget)
+        self.sel_movie_cbx.setGeometry(QtCore.QRect(100, 20, 69, 22))
+        self.sel_movie_cbx.setObjectName("sel_movie_cbx")
+        self.sel_movie_cbx.addItem("")
+        self.sel_movie_cbx.addItem("")
+        self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
+        self.tabWidget.setGeometry(QtCore.QRect(50, 70, 681, 481))
+        self.tabWidget.setObjectName("tabWidget")
+        self.wc_tab = QtWidgets.QWidget()
+        self.wc_tab.setObjectName("wc_tab")
+        self.wc_view_2 = QtWidgets.QLabel(self.wc_tab)
+        self.wc_view_2.setGeometry(QtCore.QRect(40, 40, 581, 381))
+        self.wc_view_2.setText("")
+        self.wc_view_2.setObjectName("wc_view_2")
+        self.tabWidget.addTab(self.wc_tab, "")
+        self.city_tab = QtWidgets.QWidget()
+        self.city_tab.setObjectName("city_tab")
+        self.city_view = QtWidgets.QLabel(self.city_tab)
+        self.city_view.setGeometry(QtCore.QRect(40, 40, 591, 391))
+        self.city_view.setText("")
+        self.city_view.setObjectName("city_view")
+        self.tabWidget.addTab(self.city_tab, "")
+        self.gen_tab = QtWidgets.QWidget()
+        self.gen_tab.setObjectName("gen_tab")
+        self.gen_view = QtWidgets.QLabel(self.gen_tab)
+        self.gen_view.setGeometry(QtCore.QRect(33, 31, 601, 401))
+        self.gen_view.setText("")
+        self.gen_view.setObjectName("gen_view")
+        self.tabWidget.addTab(self.gen_tab, "")
+        self.tab = QtWidgets.QWidget()
+        self.tab.setObjectName("tab")
+        self.score_view = QtWidgets.QLabel(self.tab)
+        self.score_view.setGeometry(QtCore.QRect(40, 30, 601, 401))
+        self.score_view.setText("")
+        self.score_view.setObjectName("score_view")
+        self.tabWidget.addTab(self.tab, "")
+        self.tab_2 = QtWidgets.QWidget()
+        self.tab_2.setObjectName("tab_2")
+        self.scatter_view = QtWidgets.QLabel(self.tab_2)
+        self.scatter_view.setGeometry(QtCore.QRect(43, 31, 591, 391))
+        self.scatter_view.setText("")
+        self.scatter_view.setObjectName("scatter_view")
+        self.tabWidget.addTab(self.tab_2, "")
+        self.tab_3 = QtWidgets.QWidget()
+        self.tab_3.setObjectName("tab_3")
+        self.stack_view = QtWidgets.QLabel(self.tab_3)
+        self.stack_view.setGeometry(QtCore.QRect(23, 21, 631, 411))
+        self.stack_view.setText("")
+        self.stack_view.setObjectName("stack_view")
+        self.tabWidget.addTab(self.tab_3, "")
+        self.down_data_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.down_data_btn.setGeometry(QtCore.QRect(200, 20, 75, 23))
+        self.down_data_btn.setObjectName("down_data_btn")
+        self.pre_data_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.pre_data_btn.setGeometry(QtCore.QRect(410, 20, 75, 23))
+        self.pre_data_btn.setObjectName("pre_data_btn")
+        self.state_label = QtWidgets.QLabel(self.centralwidget)
+        self.state_label.setGeometry(QtCore.QRect(630, 20, 91, 21))
+        self.state_label.setObjectName("state_label")
+        self.open_file_btn = QtWidgets.QPushButton(self.centralwidget)
+        self.open_file_btn.setGeometry(QtCore.QRect(310, 20, 71, 21))
+        self.open_file_btn.setObjectName("open_file_btn")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 776, 23))
+        self.menubar.setObjectName("menubar")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+
+        self.retranslateUi(MainWindow)
+        self.sel_movie_cbx.setCurrentIndex(0)
+        self.down_data_btn.clicked.connect(lambda: down_data(self.state_label))
+        self.pre_data_btn.clicked.connect(lambda: pre_data(self.state_label))
+        self.tabWidget.setCurrentIndex(0)
+        self.move_analysis_btn.clicked.connect(lambda: movie_analysis(self.wc_view_2, self.state_label))
+        self.sel_movie_cbx.currentIndexChanged['int'].connect(lambda: select_movie(self.sel_movie_cbx))
+        self.tabWidget.currentChanged['int'].connect(
+            lambda: tab_view(self.tabWidget, self.city_view, self.gen_view, self.score_view, self.scatter_view,
+                             self.stack_view))
+        self.open_file_btn.clicked.connect(lambda : open_file(MainWindow))
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "电影评论爬虫"))
+        self.move_analysis_btn.setText(_translate("MainWindow", "影视分析"))
+        self.sel_movie_cbx.setCurrentText(_translate("MainWindow", "哪吒之魔童降世"))
+        self.sel_movie_cbx.setItemText(0, _translate("MainWindow", "哪吒之魔童降世"))
+        self.sel_movie_cbx.setItemText(1, _translate("MainWindow", "西虹市首富"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.wc_tab), _translate("MainWindow", "词云"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.city_tab), _translate("MainWindow", "城市分析"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.gen_tab), _translate("MainWindow", "性别分析"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab), _translate("MainWindow", "评分统计"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_2), _translate("MainWindow", "气泡图"))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("MainWindow", "面积图"))
+        self.down_data_btn.setText(_translate("MainWindow", "影评下载"))
+        self.pre_data_btn.setText(_translate("MainWindow", "数据清洗"))
+        self.state_label.setText(_translate("MainWindow", "初始状态..."))
+        self.open_file_btn.setText(_translate("MainWindow", "导入文件"))
+
+import pro_resource_rc
