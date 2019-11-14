@@ -24,10 +24,15 @@
 5.调度数据分析各模块的主模块：movie_comment_analysis_main.py
 
 ## 用法
-下载movie_analysis项目到本地，PyCharm导入项目并配好运行环境以及安装上述依赖包，运行Main.py，出现如下界面：
-![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E5%88%9D%E5%A7%8B.png)
-此时有两种选择：
-1.没有影评数据，需要下载影评
-![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E4%B8%8B%E8%BD%BD%E5%BD%B1%E8%AF%84.png)
-2.有影评数据，选择导入文件
-![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6.png)
+  下载movie_analysis项目到本地，PyCharm导入项目并配好运行环境以及安装上述依赖包，运行Main.py，出现如下界面：
+  ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E5%88%9D%E5%A7%8B.png)
+
+  此时有两种选择：
+
+  1.没有影评数据，需要下载影评
+
+  ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E4%B8%8B%E8%BD%BD%E5%BD%B1%E8%AF%84.png)
+
+  2.有影评数据，选择导入文件
+
+  ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6.png)
