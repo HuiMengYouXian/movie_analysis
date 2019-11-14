@@ -29,10 +29,19 @@
 
   此时有两种选择：
 
-  1.没有影评数据，需要下载影评
+  1).没有影评数据，需要下载影评
 
   ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E4%B8%8B%E8%BD%BD%E5%BD%B1%E8%AF%84.png)
 
-  2.有影评数据，选择导入文件
+  2).有影评数据，选择导入文件
 
   ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E5%AF%BC%E5%85%A5%E6%96%87%E4%BB%B6.png)
+  
+  下一步是数据清洗，等数据清洗完毕后，接下来是数据分析，数据分析阶段可能会出现卡顿无响应现象，等待即可，数据分析完成后会出现如下界面
+  
+  ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.png)
+  
+  可切换查看各种可视化结果
+  
+  ![image](https://github.com/HuiMengYouXian/movie_analysis/blob/master/image-folder/%E5%8F%AF%E8%A7%86%E5%8C%96.png)
+  
